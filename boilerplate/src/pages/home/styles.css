@@ -1,0 +1,7 @@
+.content {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+    background-color: var(--content-background-color);
+}
