@@ -1,7 +1,10 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, Form } from "react-bootstrap";
 
+function NavBar({ setTheme }) {
+    function handleChange(e) {
+        setTheme(e.target.value);
+    }
 
-function NavBar() {
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
@@ -11,6 +14,13 @@ function NavBar() {
                     <Nav.Link href="/page1">Page1</Nav.Link>
                     <Nav.Link href="#pricing">Pricing</Nav.Link>
                 </Nav>
+                <Form.Control
+                    as="select"
+                    name="themechanger"
+                    onChange={handleChange}>
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>                    
+                </Form.Control>
             </Container>
         </Navbar>
     );
